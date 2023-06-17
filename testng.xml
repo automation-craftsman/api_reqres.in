@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Suite">
+<suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="in.reqres.api">
         <classes>
-            <class name="get.Get">
+            <class name="requests.Get">
                 <methods>
-                    <include name="getAllUsers"/>
                     <include name="getSingleUser"/>
+                    <include name="getAllUsers"/>
+                    <include name="testResponse"/>
+                    <include name="testDynamicResponse"/>
+                </methods>
+            </class>
+            <class name="schema.SchemaValidation">
+                <methods>
+                    <include name="jsonSchemaValidation"/>
+                    <include name="xmlSchemaValidation"/>
                 </methods>
             </class>
         </classes>
